@@ -61,7 +61,7 @@ const TripItinerariesCard: React.FC = () => {
                 key={index}
                 className="bg-white rounded-lg shadow p-4 border-b border-gray-200 flex-col relative"
               >
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-24">
+                <div className="w-[92%] flex flex-col sm:flex-row gap-6 sm:gap-24">
                   <div className="flex items-center space-x-2 mb-2">
                     <AirlineIcon className="w-5 h-5 text-gray-600" />
                     <div className="flex-col">
@@ -100,11 +100,14 @@ const TripItinerariesCard: React.FC = () => {
                         <span>{flight.flightDirection}</span>
                       </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center mt-4 sm:mt-0">
-                      <h4 className="text-lg font-semibold text-center">
-                        <NairaIcon /> {flight.flightPrice}
-                      </h4>
-                    </div>
+                  </div>
+                  <div className="flex flex-col items-center sm:items-end mt-4 sm:mt-0 sm:ml-auto">
+                    <h4 className="flex text-lg font-semibold items-center">
+                      <span>
+                        <NairaIcon />
+                      </span>
+                      <span>{flight.flightPrice}</span>
+                    </h4>
                   </div>
                 </div>
 
@@ -166,7 +169,7 @@ const TripItinerariesCard: React.FC = () => {
                 key={index}
                 className="bg-white rounded-lg shadow p-4 border-b border-gray-200 flex-col relative"
               >
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-4">
+                <div className="w-[96%] flex flex-col sm:flex-row gap-6 sm:gap-4">
                   <div className="w-36 bg-gray-300 h-full mr-4 rounded-lg flex items-center justify-center">
                     <HotelsIcon className="text-gray-500" />
                   </div>
@@ -187,7 +190,6 @@ const TripItinerariesCard: React.FC = () => {
                           <span>{hotel.roomType}</span>
                         </div>
                       </div>
-                      {/* Price Info */}
                       <div className="flex-col text-left ml-auto">
                         <h4 className="text-lg font-semibold text-[#1D2433] flex items-center">
                           <span>
@@ -195,9 +197,12 @@ const TripItinerariesCard: React.FC = () => {
                           </span>{" "}
                           <span>{hotel.pricePerNight}</span>
                         </h4>
-                        <p className="text-sm text-gray-500">
-                          Total Price: <NairaIcon />
-                          {hotel.totalPrice}
+                        <p className="flex text-sm text-gray-500 items-center">
+                          <span>Total Price:</span>{" "}
+                          <span>
+                            <NairaIcon />
+                          </span>
+                          <span>{hotel.totalPrice}</span>
                         </p>
                         <p className="text-sm text-gray-500">
                           1 room x 10 nights incl. taxes
@@ -225,6 +230,9 @@ const TripItinerariesCard: React.FC = () => {
                       </button>
                     </div>
                   </div>
+                </div>
+                <div className="flex items-center justify-center w-10 bg-[#FBEAE9] absolute right-0 top-0 bottom-0">
+                  <CloseIcon className="w-6 h-6 text-gray-500 cursor-pointer" />
                 </div>
               </div>
             ))
@@ -256,7 +264,7 @@ const TripItinerariesCard: React.FC = () => {
                 key={index}
                 className="bg-white rounded-lg shadow p-4 border-b border-gray-200 flex-col relative"
               >
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-4">
+                <div className="w-[96%] flex flex-col sm:flex-row gap-6 sm:gap-4">
                   <div className="w-full sm:w-36 bg-gray-300 h-full mr-4 rounded-lg flex items-center justify-center">
                     <HotelsIcon className="text-gray-500" />
                   </div>
@@ -278,8 +286,11 @@ const TripItinerariesCard: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex-col text-left ml-auto">
-                        <h4 className="text-lg font-semibold text-[#1D2433]">
-                          {activity.activityPrice}
+                        <h4 className="flex text-lg font-semibold text-[#1D2433] items-center">
+                          <span>
+                            <NairaIcon />
+                          </span>
+                          <span>{activity.activityPrice}</span>
                         </h4>
                         <p className="text-sm text-gray-500">
                           1 Person x 2 Days
