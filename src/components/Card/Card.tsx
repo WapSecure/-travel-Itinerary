@@ -15,18 +15,15 @@ const CardComponent: React.FC = () => {
 
   return (
     <div className="bg-white rounded-sm shadow-lg p-4 sm:p-6 max-w-6xl mx-auto my-5">
-      {/* Show BannerComponent only on larger screens */}
       <div className="hidden lg:block">
         <BannerComponent />
       </div>
       <div className="mt-4">
-        {/* Date range */}
         <div className="flex items-center w-56 p-1 text-sm text-gray-500 bg-[#FEF4E6]">
           <span>21 March 2024</span>
           <span className="mx-2">→</span>
           <span>21 April 2024</span>
         </div>
-        {/* Title and Description */}
         <div className="mt-4">
           <h1 className="text-xl sm:text-2xl font-semibold text-left">
             Bahamas Family Trip
@@ -36,7 +33,6 @@ const CardComponent: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* Grid layout for cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
         {[
           {
@@ -86,7 +82,6 @@ const CardComponent: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* Search Modal */}
       <SearchModal
         isOpen={modalOpen}
         type={modalType}

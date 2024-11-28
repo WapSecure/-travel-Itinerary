@@ -144,7 +144,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, type, onClose }) => {
           &times;
         </button>
         <h2 className="text-lg font-semibold mb-4">Search for {type}</h2>
-        {/* Render date inputs based on type */}
         {type === "Flight" && (
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">
@@ -185,8 +184,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, type, onClose }) => {
             </div>
           </>
         )}
-
-        {/* Show loading or result message */}
         {loading ? (
           <p>Loading...</p>
         ) : data ? (
@@ -221,8 +218,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, type, onClose }) => {
         ) : (
           <p>{noDataMessage}</p>
         )}
-
-        {/* Show the search or add details button */}
         {!searchSuccessful ? (
           <button
             onClick={handleSearch}

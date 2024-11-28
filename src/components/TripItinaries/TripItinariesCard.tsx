@@ -43,7 +43,6 @@ const TripItinerariesCard: React.FC = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 max-w-6xl mx-auto my-5 relative space-y-8">
-      {/* Flights Section */}
       <div className="bg-[#F0F2F5] p-6">
         <div className="flex justify-between items-center mb-4 flex-wrap">
           <h2 className="text-xl font-semibold">Flights</h2>

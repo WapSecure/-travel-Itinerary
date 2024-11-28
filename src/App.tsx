@@ -1,7 +1,7 @@
 import "./App.css";
 import CardComponent from "./components/Card/Card";
 import NavBar from "./components/NavBar/NavBar";
-import Sidebar from "./components/SideBar/Sidebar"; // Assuming you have Sidebar component created
+import Sidebar from "./components/SideBar/Sidebar";
 import TripItinerariesCard from "./components/TripItinaries/TripItinariesCard";
 
 function App() {
