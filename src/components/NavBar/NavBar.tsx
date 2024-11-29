@@ -22,7 +22,6 @@ const NavBar: React.FC = () => {
 
   return (
     <div className="flex items-center justify-between px-4 py-2 bg-white shadow-md">
-      {/* Left section with Logo and Search */}
       <div className="flex items-center space-x-4">
         <LogoIcon className="h-8 w-8" />
 
@@ -38,22 +37,17 @@ const NavBar: React.FC = () => {
         </div>
       </div>
 
-      {/* Right section with Menu Items and Hamburger Icon */}
       <div className="flex items-center">
-        {/* Hamburger icon visible only on mobile/tablet */}
         <button className="lg:hidden flex items-center" onClick={toggleMenu}>
           <MenuIcon className="h-6 w-6 text-gray-600" />
         </button>
 
-        {/* Menu items */}
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
           } absolute top-16 left-0 w-full bg-white shadow-md lg:static lg:flex lg:flex-row lg:items-center lg:space-x-6 lg:w-auto`}
         >
-          {/* First row of menu items */}
           <div className="flex flex-col lg:flex-row items-center justify-center text-gray-600 space-y-4">
-            {/* Hide Home item on mobile and tablet, show on lg and up */}
             <div className="hidden lg:block">
               <button
                 className="flex flex-col items-center space-y-1 mx-3 hover:text-blue-600"
@@ -81,9 +75,7 @@ const NavBar: React.FC = () => {
             ))}
           </div>
 
-          {/* Second row of menu items and Subscribe button */}
           <div className="flex flex-col lg:flex-row items-center justify-center text-gray-600 space-y-4">
-            {/* Remove the border for mobile/tablet */}
             <div className="hidden lg:block border-r h-14 border-gray-300 mx-4" />
             <button className="px-4 py-2 bg-blue-600 text-white rounded-md">
               Subscribe
@@ -103,7 +95,6 @@ const NavBar: React.FC = () => {
             ))}
           </div>
 
-          {/* Remove the User Profile for mobile/tablet */}
           <div className="hidden lg:flex items-center space-x-2 ml-4">
             <UserIcon />
             <CaretDownIcon />
